@@ -1,0 +1,5 @@
+# Compiled Windows executables
+*.exe
+
+# Local editor settings
+.vscode/
