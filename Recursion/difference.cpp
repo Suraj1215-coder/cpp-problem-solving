@@ -14,10 +14,14 @@ void mergeArray(const vector<int>& A, int m, const vector<int>& B, int n)
             
         }
         else
-        {
-            C.push_back(B[j]);
-            j++;
+        {   if(B[j]<A[i]){
             
+            j++;
+        }
+            else{
+                i++;
+                j++;
+            }
         }
     }
     while(i<m)
@@ -26,12 +30,7 @@ void mergeArray(const vector<int>& A, int m, const vector<int>& B, int n)
         i++;
        
     }
-    while(j<n)
-    {
-        C.push_back(B[j]);
-        j++;
-        
-    }
+    
     for(const int value : C)
     {
         cout<<value<<" ";

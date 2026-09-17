@@ -13,11 +13,16 @@ void mergeArray(const vector<int>& A, int m, const vector<int>& B, int n)
             i++;
             
         }
-        else
+        else if(B[j]<A[i])
         {
             C.push_back(B[j]);
             j++;
             
+        }
+        else if(A[i]==B[j])
+        {
+            i++;
+            j++;
         }
     }
     while(i<m)
